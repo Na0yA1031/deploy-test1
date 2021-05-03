@@ -1,0 +1,128 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    padding: 20px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 6;
+    width: 100%;
+}
+
+.header-logo {
+    width:  100px;
+    max-height: 46px;
+    margin-right: 20px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-flex-logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.header-h2 {
+    font-size: 16px;
+    font-weight: bold;
+    @include sp {
+        display: none;
+    }
+}
+
+.nav-menu { 
+    background-color: rgba(10, 2, 2, 0.9);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 320px;
+    height: 100%;
+    transition: .6s;
+    overflow-y: scroll;
+    @include sp {
+        width: 280px;
+    }
+    &-in {  
+    transform: translateX(-100%);
+    z-index: 2;
+    }
+    & ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 2;
+    list-style: none;
+    @include sp {
+        // height: 70%;
+        // justify-content: space-between;
+        // max-width: 300px;
+        // margin: 120px auto 0;
+    }
+    
+    & li {
+        padding: 25px 0;
+    }
+    & li:hover {
+        background-color:rgba(255,255,255,0.2);
+        cursor: pointer;
+    }
+    & li:first-child {
+        // border-top: #fff solid 1px;
+        @include sp {
+            border: none;
+        }
+    }
+    & li span {
+        color:white;
+        margin-left: 30px;
+        z-index: 5;
+        }
+    }
+    
+}
+
+// .under-line {
+//     position: relative;
+//     display: inline-block;
+//     text-decoration: none;
+//     &::after {
+//         position: absolute;
+//         bottom: -4px;
+//         left: 0;
+//         content: '';
+//         width: 100%;
+//         height: 1px;
+//         background: #fff;
+//         transform: scale(0, 1);
+//         transform-origin: center top;
+//         transition: transform .3s;
+//     }
+//     &:hover::after {
+//         transform: scale(1, 1);
+//     }
+// }
+
+.modal {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(127, 127, 127, 0.6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.hamburger-react {
+    z-index: 3;
+    right: 30px;
+}
